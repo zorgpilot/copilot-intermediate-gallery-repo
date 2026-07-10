@@ -17,9 +17,16 @@
   --foreground: #ededed;
 }
 
-/* Smooth theme transition */
-*, *::before, *::after {
-  transition-property: background-color, border-color, color;
+/* Smooth theme transition - scoped to key background and text elements */
+.page-gradient,
+.card-base,
+.card-elevated,
+.card-feature,
+.card-stats,
+.gallery-card,
+body,
+header {
+  transition-property: background-color, background, border-color, color;
   transition-duration: 200ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
